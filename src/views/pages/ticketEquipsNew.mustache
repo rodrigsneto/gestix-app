@@ -1,0 +1,69 @@
+{{>partials/header}}
+
+<form method="POST" enctype="multipart/form-data" action="/ticketEquips/newAction">
+
+    <label for="">Clientes</label>
+    <input id="" type="text" name="customer" placeholder="Compliance"><br/><br/>
+
+    <label for="">Responsável - Cliente</label>
+    <input type="text" name="customer_responsible" placeholder="Funcionário(a) que autorizou/acompanhou a coleta"><br/>
+
+    <hr /><br/>
+
+    <label for="">Nome do Equipamento</label>
+    <input type="text" name="name" placeholder="Notebook Asus A42F"><br/><br/>
+
+    <label for="">Defeito</label>
+    <input type="text" name="defect" placeholder="Notebook não liga"><br/><br/>
+
+    <label for="">Data da Coleta</label>
+    <input name="received_date" type="date"><br/><br/>
+
+    <label for="">Imagem do Equipamento</label>
+    <input type="file" name="image" id="" accept=".png, .jpg, .jpeg" multiple><br/><br/>
+
+    <label for="">Atendente Responsável pela Coleta</label>
+    <select name="attedant">
+        <option selected>Selecione quem coletou</option>
+        <option value="1">LUAN GUERREIRO</option>
+        <option value="2">FERNANDO PIRES</option>
+        <option value="3">CESAR RODRIGUES</option>
+    </select><br/>
+
+    <hr /><br/>
+
+    <label for="">Status</label>
+    <select name="status">
+        <option value="1" selected>COLETADO</option>
+        <option value="2">EM ANALISE</option>
+        <option value="3">NAO AUTORIZADO</option>
+        <option value="4">PRONTO</option>
+        <option value="5">AGUARDANDO AUTORIZACAO</option>
+        <option value="6">AGUARDANDO DIAGNOSTICO</option>
+        <option value="7">AGUARDANDO REPARO</option>
+    </select><br/><br/>
+
+    <label for="">Prioridade</label>
+    <select name="priority">
+        <option value="1" selected>BAIXO</option>
+        <option value="2">NORMAL</option>
+        <option value="3">ALTA</option>
+        <option value="4">PRONTO</option>
+    </select><br/><br/>
+
+    <label for="">Empresa Parceira</label>
+    <select name="repair_company">
+        <option value="1" selected>PRIX TECNOLOGIA</option>
+        <option value="2">ITAMAR</option>
+        <option value="3">JN TECH</option>
+    </select><br/><br/>
+
+    <label for="">Entrega a Empresa Parceira</label>
+    <input type="date" name="repair_company_received_date"><br/><br/>
+
+    <button type="submit" class="btn btn-primary">Novo Ticket</button>
+</form>
+
+
+
+{{>partials/footer}}
